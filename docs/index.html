@@ -4,43 +4,214 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0f1115">
-  <meta name="description" content="Create polished screenshots, device mockups and App Store assets in your browser.">
-  <title>Mockup Studio</title>
-  <style>
-:root{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#e7e9ee;background:#0f1115;font-synthesis:none;--panel:#15181f;--line:#2a2f3a;--muted:#8e97a8;--accent:#f0ca65;--accent-ink:#1a160a}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#0f1115}body{min-height:100vh;overflow:hidden}button,input,select,textarea{font:inherit}button{color:inherit}.app-shell{height:100vh;display:grid;grid-template-columns:236px minmax(0,1fr) 278px;grid-template-rows:58px minmax(0,1fr)}.topbar{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;padding:0 14px 0 12px;border-bottom:1px solid var(--line);background:rgba(15,17,21,.94);backdrop-filter:blur(14px);z-index:20}.brand-group,.top-actions{display:flex;align-items:center;gap:10px}.brand-mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:850;color:var(--accent-ink);background:var(--accent)}.brand{font-size:14px;font-weight:750}.save-state{font-size:11px;color:var(--muted);margin-top:2px}.sidebar{min-height:0;overflow:auto;padding:16px 12px;background:var(--panel)}.left-panel{border-right:1px solid var(--line)}.right-panel{border-left:1px solid var(--line)}.panel-title{color:#9ba4b6;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin:2px 6px 9px}.section-gap{margin-top:22px}.tool-button,.button,.icon-button,.mini-button{border:1px solid transparent;background:transparent;cursor:pointer;transition:.14s ease}.tool-button:hover,.mini-button:hover,.icon-button:hover{background:#222731}.tool-button{width:100%;min-height:38px;border-radius:9px;display:flex;align-items:center;gap:9px;padding:0 10px;text-align:left;color:#dce0e8;font-size:13px}.tool-button span{width:20px;color:#aeb6c5;text-align:center;font-weight:750}.tool-button.active{background:#242a34;border-color:#323946}.button{min-height:36px;border-radius:9px;padding:0 13px;background:#20252e;border-color:#303744;color:#edf0f6;font-weight:650;font-size:12px}.button:hover{background:#282e39}.button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}.button.ghost{background:transparent}.button.full-width{width:100%}.icon-button{width:34px;height:34px;border-radius:9px;font-size:18px}.mini-button{min-height:30px;border-radius:8px;padding:0 9px;font-size:11px;color:#aeb6c5}.danger-text{color:#ff9a9a}.select-control,.property-grid input,textarea{width:100%;border:1px solid #303744;border-radius:8px;background:#11141a;color:#e7e9ee;outline:none}.select-control{height:36px;padding:0 9px;font-size:12px}.field-label{display:block;font-size:11px;color:var(--muted);margin:0 0 7px 2px}.field-label.block{margin-top:16px}.range-control{width:100%;accent-color:var(--accent)}.property-grid{display:grid;gap:9px}.property-grid.two-col{grid-template-columns:1fr 1fr}.property-grid label{font-size:10px;color:var(--muted)}.property-grid input{height:34px;margin-top:5px;padding:0 8px}textarea{padding:9px;resize:vertical;min-height:84px}.toggle-row{display:flex;align-items:center;gap:8px;font-size:12px;color:#cbd1db;margin-top:14px}.swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.swatch{aspect-ratio:1.45;border-radius:8px;border:2px solid transparent;background:var(--swatch);cursor:pointer;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}.swatch.selected{border-color:var(--accent)}.layers-list{display:flex;flex-direction:column;gap:5px}.layer-row{display:flex;align-items:center;gap:8px;min-height:34px;padding:0 8px;border-radius:8px;font-size:11px;color:#b9c0cd;cursor:pointer}.layer-row:hover{background:#20252e}.layer-row.selected{background:#282e39;color:#fff}.layer-icon{width:20px;text-align:center;color:var(--muted)}.layer-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.workspace{min-width:0;min-height:0;position:relative;background:#0d0f13;overflow:hidden}.workspace:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#2c313b 1px,transparent 1px);background-size:18px 18px;opacity:.32;pointer-events:none}.workspace-toolbar{position:absolute;z-index:12;top:12px;left:50%;transform:translateX(-50%);min-height:38px;padding:4px 5px 4px 11px;border-radius:11px;display:flex;align-items:center;gap:2px;border:1px solid #2d333e;background:rgba(21,24,31,.94);box-shadow:0 10px 30px rgba(0,0,0,.22)}.workspace-toolbar span{font-size:10px;color:var(--muted);margin-right:5px}.stage-viewport{position:absolute;inset:0;overflow:auto;display:flex;align-items:center;justify-content:center;padding:76px 60px 62px}.stage{position:relative;flex:none;transform-origin:center center;box-shadow:0 28px 70px rgba(0,0,0,.45);overflow:hidden;user-select:none;touch-action:none}.drop-hint{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);padding:7px 11px;border:1px solid #2d333e;border-radius:999px;color:#838c9d;background:rgba(19,22,28,.9);font-size:10px;pointer-events:none}.workspace.drag-over .stage{outline:3px solid var(--accent);outline-offset:8px}.stage-element{position:absolute;transform-origin:center center;cursor:grab;touch-action:none}.stage-element.selected:after{content:"";position:absolute;inset:-5px;pointer-events:none;border:2px solid #6da9ff;border-radius:8px}.resize-handle{position:absolute;z-index:8;width:18px;height:18px;right:-12px;bottom:-12px;border-radius:50%;border:3px solid #0d0f13;background:#6da9ff;cursor:nwse-resize}.media-shell{position:absolute;inset:0;overflow:hidden}.media-shell img{width:100%;height:100%;display:block;object-fit:cover;pointer-events:none}.frame-none .media-shell{border-radius:var(--media-radius)}.frame-none.shadow .media-shell{box-shadow:0 26px 52px rgba(0,0,0,.27)}.frame-iphone{padding:3.4%;border-radius:12%;background:#08090b;box-shadow:0 28px 58px rgba(0,0,0,.35)}.frame-iphone .media-shell{inset:3.4%;border-radius:9.6%}.frame-iphone:before{content:"";position:absolute;z-index:4;width:28%;height:3.2%;left:36%;top:2.1%;border-radius:999px;background:#030405}.frame-browser{padding-top:7.2%;border-radius:2.5%;background:#e9edf3;box-shadow:0 28px 58px rgba(0,0,0,.28)}.frame-browser .media-shell{inset:7.2% 0 0;border-radius:0;background:white}.frame-browser:before{content:"● ● ●";position:absolute;z-index:4;top:1.6%;left:2.2%;color:#8c96a7;font-size:clamp(5px,1.2vw,18px);letter-spacing:.18em}.text-element{white-space:pre-wrap;line-height:1.04;font-weight:600;letter-spacing:-.035em;overflow:visible}.empty-properties{color:#7f899a;font-size:12px;line-height:1.55;padding:4px}.dialog{width:min(520px,calc(100vw - 32px));border:1px solid #323946;border-radius:16px;padding:0;color:#e7e9ee;background:#171a21;box-shadow:0 35px 100px rgba(0,0,0,.55)}.dialog::backdrop{background:rgba(4,6,9,.72);backdrop-filter:blur(7px)}.dialog form{padding:18px}.dialog-header{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.dialog h2{font-size:18px;margin:2px 0 4px}.dialog p{color:var(--muted);margin:0;font-size:12px}.dialog-actions-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:22px}.toast{position:fixed;z-index:60;left:50%;bottom:22px;transform:translate(-50%,20px);background:#f1f3f7;color:#15171b;border-radius:999px;padding:9px 14px;font-size:11px;font-weight:700;opacity:0;pointer-events:none;transition:.18s ease}.toast.show{opacity:1;transform:translate(-50%,0)}@media(max-width:980px){.app-shell{grid-template-columns:82px minmax(0,1fr) 240px}.left-panel{padding:12px 8px}.left-panel .panel-title,.left-panel .field-label,.left-panel .select-control,.left-panel .swatches,.left-panel .layers-list{display:none}.left-panel .section-gap{margin-top:10px}.tool-button{justify-content:center;padding:0;font-size:0;min-height:46px}.tool-button span{font-size:16px}.stage-viewport{padding-left:30px;padding-right:30px}}@media(max-width:720px){body{overflow:auto}.app-shell{min-height:100vh;height:auto;grid-template-columns:1fr;grid-template-rows:58px minmax(64vh,620px) auto}.topbar{position:sticky;top:0}.left-panel{grid-row:3;border:0;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);gap:6px;overflow:visible}.left-panel .tool-button{min-height:44px}.left-panel .tool-button:nth-of-type(n+6),.left-panel .panel-title,.left-panel .section-gap,.left-panel .field-label,.left-panel .select-control,.left-panel .swatches,.left-panel .layers-list{display:none}.workspace{grid-row:2;min-height:620px}.right-panel{display:none}.brand-group .save-state{display:none}.button.ghost{display:none}.stage-viewport{padding:76px 20px 60px}}
-  </style>
+  <meta name="description" content="Mockup Studio v0.5 — screenshots, App Store sets, animation and video mockups in your browser.">
+  <title>Mockup Studio v0.5</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="app-shell">
-    <header class="topbar"><div class="brand-group"><div class="brand-mark">M</div><div><div class="brand">Mockup Studio</div><div class="save-state" id="saveState">Local project</div></div></div><div class="top-actions"><button class="icon-button" id="undoButton" title="Undo">↶</button><button class="icon-button" id="redoButton" title="Redo">↷</button><button class="button ghost" id="projectButton">Project</button><button class="button primary" id="exportButton">Export PNG</button></div></header>
-    <aside class="sidebar left-panel"><div class="panel-title">Create</div><button class="tool-button active" id="uploadButton"><span>＋</span> Upload image</button><button class="tool-button" id="addTextButton"><span>T</span> Add text</button><input type="file" id="imageInput" accept="image/*" multiple hidden><div class="panel-title section-gap">Layouts</div><button class="tool-button" data-layout="center"><span>▣</span> Centered</button><button class="tool-button" data-layout="hero"><span>◩</span> Hero</button><button class="tool-button" data-layout="two-up"><span>▥</span> Two up</button><div class="panel-title section-gap">Canvas</div><label class="field-label" for="canvasPreset">Size</label><select id="canvasPreset" class="select-control"><option value="1080x1350">Social portrait · 1080×1350</option><option value="1200x1200">Square · 1200×1200</option><option value="1920x1080">Landscape · 1920×1080</option><option value="1290x2796">App Store · 1290×2796</option></select><div class="panel-title section-gap">Background</div><div class="swatches" id="backgroundSwatches"><button class="swatch selected" data-bg="#f4f1ea" style="--swatch:#f4f1ea"></button><button class="swatch" data-bg="#10131a" style="--swatch:#10131a"></button><button class="swatch" data-bg="#e9eef8" style="--swatch:#e9eef8"></button><button class="swatch" data-bg="linear-gradient(135deg,#dbeafe,#f5d0fe)" style="--swatch:linear-gradient(135deg,#dbeafe,#f5d0fe)"></button><button class="swatch" data-bg="linear-gradient(135deg,#fde68a,#fdba74)" style="--swatch:linear-gradient(135deg,#fde68a,#fdba74)"></button><button class="swatch" data-bg="linear-gradient(135deg,#111827,#334155)" style="--swatch:linear-gradient(135deg,#111827,#334155)"></button></div><div class="panel-title section-gap">Layers</div><div id="layersList" class="layers-list"></div></aside>
-    <main class="workspace" id="workspace"><div class="workspace-toolbar"><span id="zoomLabel">Fit</span><button class="mini-button" id="fitButton">Fit</button><button class="mini-button" id="duplicateButton">Duplicate</button><button class="mini-button danger-text" id="deleteButton">Delete</button></div><div class="stage-viewport" id="stageViewport"><div class="stage" id="stage" aria-label="Mockup canvas"></div></div><div class="drop-hint">Drop images here or paste from the clipboard</div></main>
-    <aside class="sidebar right-panel"><div class="panel-title">Properties</div><div id="emptyProperties" class="empty-properties">Select an element to edit its position, frame and appearance.</div><div id="properties" hidden><div class="property-grid two-col"><label>X<input id="propX" type="number"></label><label>Y<input id="propY" type="number"></label><label>Width<input id="propW" type="number" min="20"></label><label>Height<input id="propH" type="number" min="20"></label></div><label class="field-label block">Rotation <span id="rotationValue">0°</span></label><input id="propRotation" type="range" min="-30" max="30" value="0" class="range-control"><label class="field-label block">Opacity <span id="opacityValue">100%</span></label><input id="propOpacity" type="range" min="10" max="100" value="100" class="range-control"><div id="imageProperties"><label class="field-label block" for="propFrame">Frame</label><select id="propFrame" class="select-control"><option value="none">None</option><option value="iphone">iPhone</option><option value="browser">Browser</option></select><label class="field-label block">Corner radius <span id="radiusValue">32</span></label><input id="propRadius" type="range" min="0" max="120" value="32" class="range-control"><label class="toggle-row"><input id="propShadow" type="checkbox" checked> Soft shadow</label></div><div id="textProperties" hidden><label class="field-label block" for="propText">Text</label><textarea id="propText" rows="4"></textarea><div class="property-grid two-col"><label>Font size<input id="propFontSize" type="number" min="12" max="240"></label><label>Color<input id="propColor" type="color"></label></div><label class="toggle-row"><input id="propBold" type="checkbox"> Bold</label></div><button class="button full-width section-gap" id="bringFrontButton">Bring to front</button></div></aside>
-  </div>
-  <dialog id="projectDialog" class="dialog"><form method="dialog"><div class="dialog-header"><div><h2>Project</h2><p>Projects stay in this browser unless you export a file.</p></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div><div class="dialog-actions-grid"><button type="button" class="button" id="newProjectButton">New project</button><button type="button" class="button" id="saveProjectButton">Save locally</button><button type="button" class="button" id="exportProjectButton">Export project</button><button type="button" class="button" id="importProjectButton">Import project</button></div><input type="file" id="projectInput" accept=".mockupstudio,application/json" hidden></form></dialog>
-  <div class="toast" id="toast" role="status"></div>
-<script type="module">
-const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];const stage=$('#stage'),workspace=$('#workspace'),viewport=$('#stageViewport'),imageInput=$('#imageInput'),projectInput=$('#projectInput'),projectDialog=$('#projectDialog'),toast=$('#toast');const makeProject=()=>({version:1,name:'Untitled Mockup',canvas:{width:1080,height:1350,background:'#f4f1ea'},elements:[],updatedAt:new Date().toISOString()});let project=makeProject(),selectedId=null,undoStack=[],redoStack=[],stageScale=.55,saveTimer=null,toastTimer=null,dragState=null,resizeState=null;const uid=()=>crypto.randomUUID?crypto.randomUUID():`${Date.now()}-${Math.random().toString(16).slice(2)}`,clone=v=>typeof structuredClone==='function'?structuredClone(v):JSON.parse(JSON.stringify(v)),selected=()=>project.elements.find(e=>e.id===selectedId)||null,clamp=(v,min,max)=>Math.max(min,Math.min(max,v)),nextZ=()=>Math.max(0,...project.elements.map(e=>e.z||0))+1;
-function pushHistory(){undoStack.push(clone(project));if(undoStack.length>60)undoStack.shift();redoStack=[];syncUndo()}function syncUndo(){$('#undoButton').disabled=!undoStack.length;$('#redoButton').disabled=!redoStack.length}function undo(){if(!undoStack.length)return;redoStack.push(clone(project));project=undoStack.pop();if(!project.elements.some(e=>e.id===selectedId))selectedId=null;renderAll();queueSave()}function redo(){if(!redoStack.length)return;undoStack.push(clone(project));project=redoStack.pop();renderAll();queueSave()}
-function fitStage(){const aw=Math.max(240,viewport.clientWidth-110),ah=Math.max(240,viewport.clientHeight-150);stageScale=Math.min(aw/project.canvas.width,ah/project.canvas.height,.8);stageScale=Math.max(.12,stageScale);stage.style.transform=`scale(${stageScale})`;stage.style.margin=`${-(project.canvas.height*(1-stageScale))/2}px ${-(project.canvas.width*(1-stageScale))/2}px`;$('#zoomLabel').textContent=`${Math.round(stageScale*100)}%`}
-function renderAll(){renderStage();renderLayers();renderProperties();syncUndo();requestAnimationFrame(fitStage)}function renderStage(){stage.style.width=`${project.canvas.width}px`;stage.style.height=`${project.canvas.height}px`;stage.style.background=project.canvas.background;stage.innerHTML='';project.elements.forEach(e=>{const n=document.createElement('div');n.className=`stage-element ${e.type==='image'?`frame-${e.frame||'none'} ${e.shadow?'shadow':''}`:'text-element'} ${e.id===selectedId?'selected':''}`;n.dataset.id=e.id;Object.assign(n.style,{left:`${e.x}px`,top:`${e.y}px`,width:`${e.width}px`,height:`${e.height}px`,opacity:e.opacity??1,transform:`rotate(${e.rotation||0}deg)`,zIndex:String(e.z||1)});n.style.setProperty('--media-radius',`${e.radius??32}px`);if(e.type==='image'){const shell=document.createElement('div');shell.className='media-shell';const img=document.createElement('img');img.src=e.src;img.alt=e.name||'Uploaded screenshot';shell.append(img);n.append(shell)}else{n.textContent=e.text;n.style.fontSize=`${e.fontSize||64}px`;n.style.color=e.color||'#111827';n.style.fontWeight=e.bold?'800':'600'}if(e.id===selectedId){const h=document.createElement('div');h.className='resize-handle';n.append(h)}stage.append(n)})}
-function renderLayers(){const l=$('#layersList');l.innerHTML='';[...project.elements].sort((a,b)=>(b.z||0)-(a.z||0)).forEach(e=>{const r=document.createElement('div');r.className=`layer-row ${e.id===selectedId?'selected':''}`;r.innerHTML=`<span class="layer-icon">${e.type==='image'?'▧':'T'}</span><span class="layer-name"></span>`;r.querySelector('.layer-name').textContent=e.type==='image'?(e.name||'Image'):(e.text||'Text');r.onclick=()=>selectElement(e.id);l.append(r)})}
-function renderProperties(){const e=selected();$('#emptyProperties').hidden=!!e;$('#properties').hidden=!e;if(!e)return;$('#propX').value=Math.round(e.x);$('#propY').value=Math.round(e.y);$('#propW').value=Math.round(e.width);$('#propH').value=Math.round(e.height);$('#propRotation').value=e.rotation||0;$('#rotationValue').textContent=`${Math.round(e.rotation||0)}°`;$('#propOpacity').value=Math.round((e.opacity??1)*100);$('#opacityValue').textContent=`${Math.round((e.opacity??1)*100)}%`;const img=e.type==='image';$('#imageProperties').hidden=!img;$('#textProperties').hidden=img;if(img){$('#propFrame').value=e.frame||'none';$('#propRadius').value=e.radius??32;$('#radiusValue').textContent=e.radius??32;$('#propShadow').checked=!!e.shadow}else{$('#propText').value=e.text||'';$('#propFontSize').value=e.fontSize||64;$('#propColor').value=e.color||'#111827';$('#propBold').checked=!!e.bold}}
-function selectElement(id){selectedId=id;renderStage();renderLayers();renderProperties()}function addText(){pushHistory();const e={id:uid(),type:'text',text:'Your headline',x:project.canvas.width*.12,y:project.canvas.height*.1,width:project.canvas.width*.76,height:180,rotation:0,opacity:1,fontSize:Math.max(52,project.canvas.width*.065),color:project.canvas.background.includes('111827')?'#fff':'#111827',bold:true,z:nextZ()};project.elements.push(e);selectedId=e.id;renderAll();queueSave()}
-const fileUrl=f=>new Promise((res,rej)=>{const r=new FileReader;r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(f)}),imageSize=src=>new Promise((res,rej)=>{const i=new Image;i.onload=()=>res({width:i.naturalWidth,height:i.naturalHeight});i.onerror=rej;i.src=src}),phoneLike=(w,h)=>Math.max(w,h)/Math.min(w,h)>1.8;
-async function addFiles(files){const fs=[...files].filter(f=>f.type.startsWith('image/'));if(!fs.length)return;pushHistory();for(let idx=0;idx<fs.length;idx++){const f=fs[idx],src=await fileUrl(f),s=await imageSize(src),ratio=Math.min(project.canvas.width*.65/s.width,project.canvas.height*.66/s.height,1),width=s.width*ratio,height=s.height*ratio,off=idx*34,e={id:uid(),type:'image',name:f.name||'Pasted image',src,x:(project.canvas.width-width)/2+off,y:(project.canvas.height-height)/2+off,width,height,rotation:0,opacity:1,frame:phoneLike(s.width,s.height)?'iphone':'none',radius:32,shadow:true,z:nextZ()};project.elements.push(e);selectedId=e.id}renderAll();queueSave();showToast(`${fs.length} image${fs.length===1?'':'s'} added`)}
-function removeSelected(){if(!selectedId)return;pushHistory();project.elements=project.elements.filter(e=>e.id!==selectedId);selectedId=null;renderAll();queueSave()}function duplicate(){const e=selected();if(!e)return;pushHistory();const c=clone(e);c.id=uid();c.x+=36;c.y+=36;c.z=nextZ();project.elements.push(c);selectedId=c.id;renderAll();queueSave()}function bringFront(){const e=selected();if(!e)return;pushHistory();e.z=nextZ();renderAll();queueSave()}
-function applyCanvasPreset(v){const [w,h]=v.split('x').map(Number);pushHistory();const rx=w/project.canvas.width,ry=h/project.canvas.height,s=Math.min(rx,ry);project.elements.forEach(e=>{e.x*=rx;e.y*=ry;e.width*=s;e.height*=s;if(e.type==='text')e.fontSize*=s});project.canvas.width=w;project.canvas.height=h;renderAll();queueSave()}
-function layout(name){const imgs=project.elements.filter(e=>e.type==='image');if(!imgs.length)return showToast('Add an image first');pushHistory();const w=project.canvas.width,h=project.canvas.height;if(name==='center'){const e=imgs[0],s=Math.min(w*.58/e.width,h*.66/e.height);e.width*=s;e.height*=s;e.x=(w-e.width)/2;e.y=(h-e.height)/2}if(name==='hero'){const e=imgs[0],s=Math.min(w*.62/e.width,h*.67/e.height);e.width*=s;e.height*=s;e.x=w*.31;e.y=h*.23;e.rotation=-4}if(name==='two-up'){if(imgs.length<2){const c=clone(imgs[0]);c.id=uid();c.z=nextZ();project.elements.push(c);imgs.push(c)}imgs.slice(0,2).forEach((e,i)=>{const s=w*.34/e.width;e.width*=s;e.height*=s;e.x=i? w*.54:w*.12;e.y=(h-e.height)/2;e.rotation=i?4:-4})}renderAll();queueSave()}
-function bindProp(sel,prop,parse=Number){$(sel).onchange=ev=>{const e=selected();if(!e)return;pushHistory();e[prop]=parse(ev.target.value);renderAll();queueSave()}}function bindRange(sel,prop,label,parse=Number,fmt=v=>v){let started=false;$(sel).onpointerdown=()=>started=false;$(sel).oninput=ev=>{const e=selected();if(!e)return;if(!started){pushHistory();started=true}e[prop]=parse(ev.target.value);$(label).textContent=fmt(ev.target.value);renderStage();renderProperties();queueSave()}}
-function stageDown(ev){const handle=ev.target.closest('.resize-handle'),node=ev.target.closest('.stage-element');if(!node){selectedId=null;renderStage();renderLayers();renderProperties();return}selectElement(node.dataset.id);const e=selected();if(handle){ev.preventDefault();pushHistory();resizeState={pointerId:ev.pointerId,startX:ev.clientX,startY:ev.clientY,width:e.width,height:e.height,ratio:e.width/e.height};return}ev.preventDefault();pushHistory();dragState={pointerId:ev.pointerId,startX:ev.clientX,startY:ev.clientY,x:e.x,y:e.y}}
-function pointerMove(ev){const e=selected();if(!e)return;if(dragState?.pointerId===ev.pointerId){const dx=(ev.clientX-dragState.startX)/stageScale,dy=(ev.clientY-dragState.startY)/stageScale;e.x=clamp(dragState.x+dx,-e.width*.8,project.canvas.width-e.width*.2);e.y=clamp(dragState.y+dy,-e.height*.8,project.canvas.height-e.height*.2);renderStage();renderLayers();renderProperties();queueSave()}if(resizeState?.pointerId===ev.pointerId){const dx=(ev.clientX-resizeState.startX)/stageScale,nw=Math.max(60,resizeState.width+dx);e.width=nw;e.height=nw/resizeState.ratio;renderStage();renderLayers();renderProperties();queueSave()}}function pointerUp(ev){if(dragState?.pointerId===ev.pointerId)dragState=null;if(resizeState?.pointerId===ev.pointerId)resizeState=null}
-function showToast(m){toast.textContent=m;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),1800)}const dbp=new Promise((res,rej)=>{const r=indexedDB.open('mockup-studio',1);r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains('projects'))r.result.createObjectStore('projects')};r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});async function saveLocal(){project.updatedAt=new Date().toISOString();try{const db=await dbp;await new Promise((res,rej)=>{const tx=db.transaction('projects','readwrite');tx.objectStore('projects').put(project,'autosave');tx.oncomplete=res;tx.onerror=()=>rej(tx.error)})}catch{localStorage.setItem('mockup-studio-autosave',JSON.stringify(project))}$('#saveState').textContent='Saved locally'}function queueSave(){$('#saveState').textContent='Saving…';clearTimeout(saveTimer);saveTimer=setTimeout(saveLocal,450)}async function loadLocal(){try{const db=await dbp,stored=await new Promise((res,rej)=>{const tx=db.transaction('projects','readonly'),r=tx.objectStore('projects').get('autosave');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});if(stored)project=stored}catch{const s=localStorage.getItem('mockup-studio-autosave');if(s)project=JSON.parse(s)}}
-function download(blob,name){const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)}const slug=v=>String(v||'mockup').toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'mockup';function exportProject(){download(new Blob([JSON.stringify(project,null,2)],{type:'application/json'}),`${slug(project.name)}.mockupstudio`)}async function importProject(f){const p=JSON.parse(await f.text());if(!p?.canvas||!Array.isArray(p.elements))throw Error('Invalid project');pushHistory();project=p;selectedId=null;renderAll();queueSave();projectDialog.close();showToast('Project imported')}
-function rr(ctx,x,y,w,h,r){r=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}function gradient(bg,ctx,w,h){if(!bg.startsWith('linear-gradient'))return bg;const c=[...bg.matchAll(/#[0-9a-fA-F]{6}/g)].map(m=>m[0]),g=ctx.createLinearGradient(0,0,w,h);g.addColorStop(0,c[0]||'#dbeafe');g.addColorStop(1,c[1]||'#f5d0fe');return g}const loadImage=src=>new Promise((res,rej)=>{const i=new Image;i.onload=()=>res(i);i.onerror=rej;i.src=src});async function drawImage(ctx,e){const img=await loadImage(e.src);ctx.save();ctx.globalAlpha=e.opacity??1;ctx.translate(e.x+e.width/2,e.y+e.height/2);ctx.rotate((e.rotation||0)*Math.PI/180);ctx.translate(-e.width/2,-e.height/2);if(e.shadow){ctx.shadowColor='rgba(0,0,0,.28)';ctx.shadowBlur=Math.max(20,e.width*.055);ctx.shadowOffsetY=Math.max(10,e.width*.025)}if(e.frame==='iphone'){const p=e.width*.034;ctx.fillStyle='#08090b';rr(ctx,0,0,e.width,e.height,e.width*.12);ctx.fill();ctx.shadowColor='transparent';ctx.save();rr(ctx,p,p,e.width-p*2,e.height-p*2,e.width*.096);ctx.clip();ctx.drawImage(img,p,p,e.width-p*2,e.height-p*2);ctx.restore();ctx.fillStyle='#020304';rr(ctx,e.width*.36,e.height*.021,e.width*.28,e.height*.032,e.height*.016);ctx.fill()}else if(e.frame==='browser'){const bar=e.height*.072;ctx.fillStyle='#e9edf3';rr(ctx,0,0,e.width,e.height,e.width*.025);ctx.fill();ctx.shadowColor='transparent';ctx.save();ctx.beginPath();ctx.rect(0,bar,e.width,e.height-bar);ctx.clip();ctx.drawImage(img,0,bar,e.width,e.height-bar);ctx.restore();['#f87171','#fbbf24','#34d399'].forEach((c,i)=>{ctx.fillStyle=c;ctx.beginPath();ctx.arc(e.width*(.035+i*.028),bar*.5,Math.max(3,bar*.11),0,Math.PI*2);ctx.fill()})}else{ctx.save();rr(ctx,0,0,e.width,e.height,e.radius||0);ctx.clip();ctx.drawImage(img,0,0,e.width,e.height);ctx.restore()}ctx.restore()}
-function wrap(ctx,text,w){const lines=[];String(text).split('\n').forEach(p=>{let line='';p.split(/\s+/).forEach(word=>{const t=line?`${line} ${word}`:word;if(ctx.measureText(t).width>w&&line){lines.push(line);line=word}else line=t});lines.push(line)});return lines}function drawText(ctx,e){ctx.save();ctx.globalAlpha=e.opacity??1;ctx.translate(e.x+e.width/2,e.y+e.height/2);ctx.rotate((e.rotation||0)*Math.PI/180);ctx.translate(-e.width/2,-e.height/2);ctx.fillStyle=e.color||'#111827';ctx.font=`${e.bold?800:600} ${e.fontSize||64}px Inter,Arial,sans-serif`;ctx.textBaseline='top';wrap(ctx,e.text||'',e.width).forEach((line,i)=>ctx.fillText(line,0,i*(e.fontSize||64)*1.04));ctx.restore()}async function exportPng(){const b=$('#exportButton');b.disabled=true;b.textContent='Rendering…';try{const c=document.createElement('canvas');c.width=project.canvas.width;c.height=project.canvas.height;const ctx=c.getContext('2d');ctx.fillStyle=gradient(project.canvas.background,ctx,c.width,c.height);ctx.fillRect(0,0,c.width,c.height);for(const e of [...project.elements].sort((a,b)=>(a.z||0)-(b.z||0))){if(e.type==='image')await drawImage(ctx,e);else drawText(ctx,e)}const blob=await new Promise(res=>c.toBlob(res,'image/png'));download(blob,`${slug(project.name)}-${c.width}x${c.height}.png`);showToast('PNG exported')}catch(err){console.error(err);showToast('Export failed')}finally{b.disabled=false;b.textContent='Export PNG'}}
-function bind(){$('#uploadButton').onclick=()=>imageInput.click();imageInput.onchange=async()=>{await addFiles(imageInput.files);imageInput.value=''};$('#addTextButton').onclick=addText;$('#undoButton').onclick=undo;$('#redoButton').onclick=redo;$('#fitButton').onclick=fitStage;$('#duplicateButton').onclick=duplicate;$('#deleteButton').onclick=removeSelected;$('#bringFrontButton').onclick=bringFront;$('#exportButton').onclick=exportPng;$('#projectButton').onclick=()=>projectDialog.showModal();$('#newProjectButton').onclick=()=>{pushHistory();project=makeProject();selectedId=null;renderAll();queueSave();projectDialog.close()};$('#saveProjectButton').onclick=async()=>{await saveLocal();showToast('Saved locally')};$('#exportProjectButton').onclick=exportProject;$('#importProjectButton').onclick=()=>projectInput.click();projectInput.onchange=async()=>{try{if(projectInput.files[0])await importProject(projectInput.files[0])}catch{showToast('Invalid project file')}projectInput.value=''};$('#canvasPreset').onchange=e=>canvasPresetFn(e.target.value);$$('[data-layout]').forEach(b=>b.onclick=()=>layout(b.dataset.layout));$$('.swatch').forEach(b=>b.onclick=()=>{pushHistory();project.canvas.background=b.dataset.bg;$$('.swatch').forEach(x=>x.classList.toggle('selected',x===b));renderAll();queueSave()});bindProp('#propX','x');bindProp('#propY','y');bindProp('#propW','width');bindProp('#propH','height');bindRange('#propRotation','rotation','#rotationValue',Number,v=>`${v}°`);bindRange('#propOpacity','opacity','#opacityValue',v=>Number(v)/100,v=>`${v}%`);bindRange('#propRadius','radius','#radiusValue',Number,String);$('#propFrame').onchange=e=>{const x=selected();if(!x)return;pushHistory();x.frame=e.target.value;renderAll();queueSave()};$('#propShadow').onchange=e=>{const x=selected();if(!x)return;pushHistory();x.shadow=e.target.checked;renderAll();queueSave()};$('#propText').onchange=e=>{const x=selected();if(!x)return;pushHistory();x.text=e.target.value;renderAll();queueSave()};bindProp('#propFontSize','fontSize');$('#propColor').onchange=e=>{const x=selected();if(!x)return;pushHistory();x.color=e.target.value;renderAll();queueSave()};$('#propBold').onchange=e=>{const x=selected();if(!x)return;pushHistory();x.bold=e.target.checked;renderAll();queueSave()};stage.onpointerdown=stageDown;window.onpointermove=pointerMove;window.onpointerup=pointerUp;window.onresize=fitStage;['dragenter','dragover'].forEach(t=>workspace.addEventListener(t,e=>{e.preventDefault();workspace.classList.add('drag-over')}));['dragleave','drop'].forEach(t=>workspace.addEventListener(t,e=>{e.preventDefault();workspace.classList.remove('drag-over')}));workspace.addEventListener('drop',e=>addFiles(e.dataTransfer.files));window.addEventListener('paste',e=>{const f=[...e.clipboardData.files].filter(x=>x.type.startsWith('image/'));if(f.length)addFiles(f)});window.addEventListener('keydown',e=>{const mod=e.metaKey||e.ctrlKey,typing=['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName);if(mod&&e.key.toLowerCase()==='z'){e.preventDefault();e.shiftKey?redo():undo();return}if(mod&&e.key.toLowerCase()==='d'&&!typing){e.preventDefault();duplicate();return}if((e.key==='Delete'||e.key==='Backspace')&&!typing){e.preventDefault();removeSelected();return}if(!typing&&selected()&&['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();pushHistory();const x=selected(),s=e.shiftKey?10:1;if(e.key==='ArrowLeft')x.x-=s;if(e.key==='ArrowRight')x.x+=s;if(e.key==='ArrowUp')x.y-=s;if(e.key==='ArrowDown')x.y+=s;renderAll();queueSave()}})}
-const canvasPresetFn=applyCanvasPreset;async function init(){bind();await loadLocal();renderAll();if(!project.elements.length)showToast('Drop or paste a screenshot to start')}init();
-</script>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand-group">
+      <div class="brand-mark">M</div>
+      <div><div class="brand">Mockup Studio <span class="version">v0.5</span></div><div class="save-state" id="saveState">Local project</div></div>
+    </div>
+    <nav class="mode-tabs" aria-label="Studio mode">
+      <button class="mode-tab active" data-mode="editor">Editor</button>
+      <button class="mode-tab" data-mode="appstore">App Store</button>
+      <button class="mode-tab" data-mode="animate">Animate</button>
+      <button class="mode-tab" data-mode="video">Video</button>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-button" id="undoButton" title="Undo">↶</button>
+      <button class="icon-button" id="redoButton" title="Redo">↷</button>
+      <button class="button ghost" id="projectButton">Project</button>
+      <button class="button primary" id="exportButton">Export</button>
+    </div>
+  </header>
+
+  <aside class="sidebar left-panel">
+    <section data-panel="editor" class="mode-panel active">
+      <div class="panel-title">Create</div>
+      <button class="tool-button active" id="uploadButton"><span>＋</span> Image</button>
+      <button class="tool-button" id="videoUploadButton"><span>▶</span> Video</button>
+      <button class="tool-button" id="addTextButton"><span>T</span> Text</button>
+      <button class="tool-button" data-add-shape="rect"><span>▭</span> Rectangle</button>
+      <button class="tool-button" data-add-shape="ellipse"><span>○</span> Ellipse</button>
+      <button class="tool-button" data-add-shape="arrow"><span>➜</span> Arrow</button>
+      <button class="tool-button" data-add-shape="step"><span>①</span> Step</button>
+      <button class="tool-button" data-add-shape="blur"><span>≈</span> Blur</button>
+      <button class="tool-button" data-add-shape="redact"><span>▧</span> Redact</button>
+      <input type="file" id="imageInput" accept="image/*" multiple hidden>
+      <input type="file" id="videoInput" accept="video/*" hidden>
+
+      <div class="panel-title section-gap">Templates</div>
+      <button class="tool-button" data-template="launch"><span>✦</span> Launch hero</button>
+      <button class="tool-button" data-template="feature"><span>▣</span> Feature card</button>
+      <button class="tool-button" data-template="comparison"><span>▥</span> Comparison</button>
+      <button class="tool-button" data-template="appstore"><span>▯</span> App Store</button>
+      <button class="tool-button" id="saveTemplateButton"><span>☆</span> Save current template</button>
+      <div id="customTemplates" class="layers-list"></div>
+
+      <div class="panel-title section-gap">Canvas</div>
+      <label class="field-label" for="canvasPreset">Size</label>
+      <select id="canvasPreset" class="select-control">
+        <option value="1080x1350">Social portrait · 1080×1350</option>
+        <option value="1200x1200">Square · 1200×1200</option>
+        <option value="1920x1080">Landscape · 1920×1080</option>
+        <option value="1290x2796">App Store iPhone · 1290×2796</option>
+        <option value="2064x2752">App Store iPad · 2064×2752</option>
+      </select>
+
+      <div class="panel-title section-gap">Background</div>
+      <div class="swatches" id="backgroundSwatches">
+        <button class="swatch selected" data-bg="#f4f1ea" style="--swatch:#f4f1ea"></button>
+        <button class="swatch" data-bg="#10131a" style="--swatch:#10131a"></button>
+        <button class="swatch" data-bg="#e9eef8" style="--swatch:#e9eef8"></button>
+        <button class="swatch" data-bg="linear-gradient(135deg,#dbeafe,#f5d0fe)" style="--swatch:linear-gradient(135deg,#dbeafe,#f5d0fe)"></button>
+        <button class="swatch" data-bg="linear-gradient(135deg,#fde68a,#fdba74)" style="--swatch:linear-gradient(135deg,#fde68a,#fdba74)"></button>
+        <button class="swatch" data-bg="linear-gradient(135deg,#111827,#334155)" style="--swatch:linear-gradient(135deg,#111827,#334155)"></button>
+      </div>
+
+      <div class="panel-title section-gap">Layers</div>
+      <div id="layersList" class="layers-list"></div>
+    </section>
+
+    <section data-panel="appstore" class="mode-panel">
+      <div class="panel-title">App Store Studio</div>
+      <label class="field-label">Device family</label>
+      <select id="storeDevice" class="select-control"><option value="iphone">iPhone 6.9″ · 1290×2796</option><option value="ipad">iPad 13″ · 2064×2752</option></select>
+      <label class="field-label block">Language</label>
+      <select id="storeLanguage" class="select-control"><option value="en">English</option><option value="nl">Nederlands</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="es">Español</option></select>
+      <label class="field-label block">Headline</label><textarea id="storeHeadline" rows="3">See what’s worth walking to</textarea>
+      <label class="field-label block">Subtitle</label><textarea id="storeSubtitle" rows="3">Explore highlights around you.</textarea>
+      <button class="button full-width section-gap" id="addStoreShot">Add current design to set</button>
+      <button class="button full-width" id="updateStoreShot">Update selected shot</button>
+      <div class="panel-title section-gap">Screenshot set</div>
+      <div id="storeShots" class="shot-list"></div>
+      <label class="toggle-row"><input id="safeAreaToggle" type="checkbox" checked> Show safe-area guides</label>
+      <button class="button full-width section-gap" id="exportStoreZip">Export current language ZIP</button>
+      <button class="button full-width" id="exportAllStoreZip">Export all languages ZIP</button>
+      <button class="button full-width" id="importSnapFrame">Import SnapFrame JSON</button>
+      <input type="file" id="snapFrameInput" accept=".json,.snapframe,application/json" hidden>
+    </section>
+
+    <section data-panel="animate" class="mode-panel">
+      <div class="panel-title">Animation</div>
+      <label class="field-label">Duration</label><input id="animDuration" class="number-control" type="number" min="1" max="30" step="0.5" value="5">
+      <label class="field-label block">Current time <span id="animTimeLabel">0.0s</span></label><input id="animTime" class="range-control" type="range" min="0" max="5" step="0.1" value="0">
+      <div class="button-row"><button class="button" id="animPlay">Play</button><button class="button" id="addKeyframe">Add keyframe</button></div>
+      <label class="field-label block">Easing</label><select id="animEasing" class="select-control"><option value="ease">Ease</option><option value="linear">Linear</option><option value="ease-in">Ease in</option><option value="ease-out">Ease out</option><option value="ease-in-out">Ease in/out</option></select>
+      <div class="panel-title section-gap">Presets</div>
+      <button class="tool-button" data-anim-preset="fade-up"><span>↑</span> Fade up</button>
+      <button class="tool-button" data-anim-preset="pop"><span>●</span> Pop</button>
+      <button class="tool-button" data-anim-preset="slide"><span>→</span> Slide in</button>
+      <div class="panel-title section-gap">Keyframes</div>
+      <div id="keyframeList" class="keyframe-list"></div>
+    </section>
+
+    <section data-panel="video" class="mode-panel">
+      <div class="panel-title">Video mockups</div>
+      <button class="button full-width" id="videoAddButton">Upload screen recording</button>
+      <div id="videoEmpty" class="empty-properties">Select or add a video layer to edit trim and jump cuts.</div>
+      <div id="videoControls" hidden>
+        <label class="field-label block">Trim start</label><input id="videoTrimStart" class="number-control" type="number" min="0" step="0.1">
+        <label class="field-label block">Trim end</label><input id="videoTrimEnd" class="number-control" type="number" min="0" step="0.1">
+        <label class="field-label block">Speed</label><select id="videoSpeed" class="select-control"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select>
+        <label class="toggle-row"><input id="videoMuted" type="checkbox" checked> Muted</label>
+        <label class="field-label block">Jump cuts</label><textarea id="videoCuts" rows="4" placeholder="1.2-2.0, 4.5-5.1"></textarea>
+      </div>
+      <div class="panel-title section-gap">Export</div>
+      <label class="field-label">Frame rate</label><select id="videoFps" class="select-control"><option value="30">30 fps</option><option value="60">60 fps</option></select>
+      <label class="field-label block">Resolution</label><select id="videoResolution" class="select-control"><option value="1080">1080p</option><option value="1440">1440p</option><option value="2048">2K</option></select>
+      <div class="capability" id="videoCapability">Checking browser video support…</div>
+      <button class="button primary full-width section-gap" id="exportVideo">Export animation/video</button>
+    </section>
+  </aside>
+
+  <main class="workspace" id="workspace">
+    <div class="workspace-toolbar">
+      <span id="selectionLabel">0 selected</span>
+      <button class="mini-button" id="fitButton">Fit</button>
+      <button class="mini-button" id="alignCenterButton">Align center</button>
+      <button class="mini-button" id="duplicateButton">Duplicate</button>
+      <button class="mini-button danger-text" id="deleteButton">Delete</button>
+    </div>
+    <div class="stage-viewport" id="stageViewport">
+      <div class="stage-wrap" id="stageWrap">
+        <div class="stage" id="stage" aria-label="Mockup canvas"></div>
+        <div class="safe-guides" id="safeGuides" hidden></div>
+        <div class="snap-guide vertical" id="guideV" hidden></div>
+        <div class="snap-guide horizontal" id="guideH" hidden></div>
+      </div>
+    </div>
+    <div class="drop-hint">Drop images or video here · Shift-click for multi-select · Paste images from clipboard</div>
+  </main>
+
+  <aside class="sidebar right-panel">
+    <div class="panel-title">Properties</div>
+    <div id="emptyProperties" class="empty-properties">Select one or more elements.</div>
+    <div id="properties" hidden>
+      <div class="property-grid two-col">
+        <label>X<input id="propX" type="number"></label><label>Y<input id="propY" type="number"></label>
+        <label>Width<input id="propW" type="number" min="20"></label><label>Height<input id="propH" type="number" min="20"></label>
+      </div>
+      <label class="field-label block">Rotation <span id="rotationValue">0°</span></label><input id="propRotation" type="range" min="-180" max="180" value="0" class="range-control">
+      <label class="field-label block">Opacity <span id="opacityValue">100%</span></label><input id="propOpacity" type="range" min="0" max="100" value="100" class="range-control">
+
+      <div id="mediaProperties">
+        <label class="field-label block">Frame</label>
+        <select id="propFrame" class="select-control">
+          <option value="none">None</option><option value="iphone17">iPhone 17 Pro</option><option value="iphoneair">iPhone Air</option><option value="ipad">iPad Pro</option><option value="android">Android</option><option value="macbook">MacBook</option><option value="browser">Browser</option>
+        </select>
+        <label class="field-label block">Corner radius <span id="radiusValue">32</span></label><input id="propRadius" type="range" min="0" max="160" value="32" class="range-control">
+        <label class="field-label block">Crop zoom <span id="cropZoomValue">100%</span></label><input id="propCropZoom" type="range" min="100" max="300" value="100" class="range-control">
+        <div class="property-grid two-col"><label>Crop X<input id="propCropX" type="number" min="-100" max="100"></label><label>Crop Y<input id="propCropY" type="number" min="-100" max="100"></label></div>
+        <label class="toggle-row"><input id="propShadow" type="checkbox" checked> Soft shadow</label>
+      </div>
+
+      <div id="textProperties" hidden>
+        <label class="field-label block">Text</label><textarea id="propText" rows="4"></textarea>
+        <div class="property-grid two-col"><label>Font size<input id="propFontSize" type="number" min="10" max="300"></label><label>Color<input id="propColor" type="color"></label></div>
+        <label class="toggle-row"><input id="propBold" type="checkbox"> Bold</label>
+      </div>
+
+      <div id="shapeProperties" hidden>
+        <div class="property-grid two-col"><label>Fill<input id="propFill" type="color"></label><label>Stroke<input id="propStroke" type="color"></label></div>
+        <label class="field-label block">Stroke width</label><input id="propStrokeWidth" class="range-control" type="range" min="0" max="30" value="4">
+      </div>
+      <button class="button full-width section-gap" id="bringFrontButton">Bring to front</button>
+    </div>
+  </aside>
+</div>
+
+<dialog id="projectDialog" class="dialog">
+  <form method="dialog">
+    <div class="dialog-header"><div><h2>Project</h2><p>Projects stay on this device unless you export them.</p></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div>
+    <label class="field-label block">Project name</label><input id="projectName" class="number-control" value="Untitled Mockup">
+    <div class="dialog-actions-grid"><button type="button" class="button" id="newProjectButton">New project</button><button type="button" class="button" id="saveProjectButton">Save locally</button><button type="button" class="button" id="exportProjectButton">Export project</button><button type="button" class="button" id="importProjectButton">Import project</button></div>
+    <input type="file" id="projectInput" accept=".mockupstudio,application/json" hidden>
+  </form>
+</dialog>
+
+<dialog id="exportDialog" class="dialog">
+  <form method="dialog">
+    <div class="dialog-header"><div><h2>Export</h2><p>Rendered locally in your browser.</p></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div>
+    <label class="field-label block">Format</label><select id="exportFormat" class="select-control"><option value="image/png">PNG</option><option value="image/jpeg">JPEG</option><option value="image/webp">WebP</option></select>
+    <label class="field-label block">Scale</label><select id="exportScale" class="select-control"><option value="1">1×</option><option value="2">2×</option></select>
+    <label class="field-label block">Quality</label><input id="exportQuality" class="range-control" type="range" min="50" max="100" value="92">
+    <button type="button" class="button primary full-width section-gap" id="exportCurrent">Export current canvas</button>
+    <button type="button" class="button full-width" id="exportVariants">Export canvas sizes as ZIP</button>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="./js/core.js"></script>
+<script src="./js/elements.js"></script>
+<script src="./js/interactions.js"></script>
+<script src="./js/appstore.js"></script>
+<script src="./js/animation.js"></script>
+<script src="./js/video.js"></script>
+<script src="./js/render-export.js"></script>
+<script src="./js/bind.js"></script>
 </body>
 </html>
