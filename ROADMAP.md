@@ -1,58 +1,27 @@
-# Roadmap
+# Mockup Studio roadmap
 
-## v0.1 Editor foundation
+## Completed
 
-Status: implemented
+### v0.1 Foundation
+Canvas editor, local projects, basic frames and PNG export.
 
-- Unified project document
-- Browser-first editor
-- Images, text, backgrounds, frames
-- Local persistence
-- PNG export
-- GitHub Pages deployment
+### v0.2 Production editor
+Multi-select, snapping, crop controls, annotations, blur/redact, expanded device library, reusable templates, JPEG/WebP and batch ZIP export.
 
-## v0.2 Production editor
+### v0.3 App Store Studio
+Screenshot sets, iPhone/iPad presets, safe-area helpers, localized headlines/subtitles, deterministic batch export and SnapFrame import.
 
-- Multi-select
-- Alignment guides and snapping
-- Crop editor
-- Shape and arrow annotations
-- Blur and redact tools
-- Richer device library
-- Reusable JSON templates
-- WebP and JPEG export
-- Batch export
+### v0.4 Animation Studio
+Keyframes, easing, timeline preview and animation presets.
 
-## v0.3 App Store Studio
+### v0.5 Video mockups
+Video layers, device masks, trim, cuts, speed/mute, 30/60 fps choices and browser-side video/frame export paths.
 
-- Screenshot set editor
-- iPhone and iPad output presets
-- Multi-language sets
-- Safe-area helpers
-- Headline and subtitle templates
-- Batch naming and ZIP export
-- SnapFrame import path
+## Next
 
-## v0.4 Animation Studio
-
-- Keyframes
-- Timeline
-- Position, scale, rotation and opacity animation
-- Easing
-- Preview loop
-- Browser-side video rendering foundation
-
-## v0.5 Video mockups
-
-- Video media elements
-- Device screen masking
-- Trim and jump cuts
-- 30 and 60 fps export
-- WebCodecs path with fallback renderer
-
-## v0.6 Capture and integrations
-
-- Browser extension for viewport/full-page/element capture
-- Code screenshot mode
+### v0.6 Capture, code and social integrations
+- browser extension for viewport, full-page and element capture
+- code screenshot mode
 - Bluesky post import
-- Optional X integration after token strategy is selected
+- optional X integration with a safe token strategy
+- optional server-assisted URL capture only if a backend is introduced later
