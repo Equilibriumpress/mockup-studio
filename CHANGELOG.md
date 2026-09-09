@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.7.1 — 2026-09-09
+Added original premium SVG device artwork for the most visible mockup families: iPhone Pro, iPhone Air, iPad Pro, Pixel 9 Pro, Galaxy S25 Ultra, Nothing Phone, MacBook Pro/Air and Studio Display/iMac. Artwork stays color-aware, overlays the editor preview and has matching canvas-export hardware detailing. Added `UI_PARITY_PLAN.md` with the full optimization path toward structural, interaction and responsive UI parity.
+
 ## v0.7 — 2026-09-09
 Added a PostSpark-parity editor layer with Screenshot/Mockup workflows, Image/Frame/Annotate/Auto inspector tabs, Backdrop/Overlay Effects/Pattern/Portrait controls, automatic image-derived gradients, uploaded backdrop images, 35 device presets with colors and orientation, 18 layouts, single/group device mode, crop presets, text alignment, border styles, Spread/Hug shadows, bulk image replacement/export, configurable export defaults, Start Over, richer Bluesky galleries/quotes/replies and extension-powered URL-to-screenshot capture with delay and dark-mode preference. Projects migrate to schema 7.
 
