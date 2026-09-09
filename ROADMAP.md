@@ -21,33 +21,35 @@ Video layers, device masks, trim, cuts, speed/mute, 30/60 fps choices and browse
 Chrome/Edge capture extension, Code Studio, public Bluesky import and token-free manual X cards.
 
 ### v0.7 PostSpark parity
-- PostSpark-style Screenshot/Mockup interaction model
+- Screenshot/Mockup interaction model
 - Image / Frame / Annotate / Auto inspector
 - Backdrop / Overlay Effects / Pattern / Portrait controls
-- 35 device presets and device colors
-- portrait/landscape and single/group device modes
-- 18 layouts
-- auto backgrounds
-- crop presets and text alignment
-- border and shadow styles
-- bulk editing and filename defaults
-- enhanced Bluesky galleries, quotes and replies
-- extension-powered URL → Screenshot with delay and dark preference
+- 35 device presets and 18 layouts
+- auto backgrounds, crop presets, text alignment, border/shadow styles
+- bulk editing, enhanced Bluesky and extension-powered URL capture
 - schema 7 migration
 
 ### v0.7.1 Premium device artwork
-- original SVG artwork sprite for key phone, tablet, laptop and display families
-- color-aware vector overlays in the live editor
-- matching premium hardware detailing in canvas export
-- no PostSpark or OEM artwork copied into the repository
+- original SVG artwork for key phone, tablet, laptop and display families
+- color-aware editor overlays
+- matching canvas-export hardware detailing
+
+### v0.8.0 UI shell and design tokens
+- current public UI reference baseline documented in `UI_REFERENCE_BASELINE.md`
+- shared design tokens in `docs/ui-tokens.css`
+- Screenshot / Mockup / Tweet / Post / Code / View All product navigation
+- persistent Export plus compact Reset/Project utilities
+- left media thumbnail rail
+- contextual Image / Frame / Annotate / Auto tools near the canvas
+- Backdrop / Overlay Effects / Pattern / Portrait moved into a dedicated style inspector
+- transform/layer properties demoted to a collapsible secondary panel
+- canvas-first empty state and responsive shell breakpoints
+- existing v0.7.1 renderer and premium artwork preserved
 
 ## Next: v0.8 UI parity program
 
 The implementation sequence and acceptance criteria are defined in `UI_PARITY_PLAN.md`.
 
-Planned releases:
-
-- v0.8.0 — reference captures, design tokens and editor shell
 - v0.8.1 — canvas interaction parity
 - v0.8.2 — all-device artwork, picker/layout previews and styling fidelity
 - v0.8.3 — full annotation environment and animation timeline parity
