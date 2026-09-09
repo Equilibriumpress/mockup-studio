@@ -46,11 +46,26 @@ Chrome/Edge capture extension, Code Studio, public Bluesky import and token-free
 - canvas-first empty state and responsive shell breakpoints
 - existing v0.7.1 renderer and premium artwork preserved
 
+### v0.8.1 Canvas interaction parity
+- Position Picker with dominant-axis locking and visible X/Y guidelines
+- zoom, Fit and pointer-centered Cmd/Ctrl-wheel zoom
+- Hand mode and temporary Space-to-pan
+- unified single/multi selection bounding box
+- eight direct resize handles plus rotation handle
+- proportional multi-layer resize and group rotation
+- canvas edge, center, element-edge and element-center snapping
+- equal-spacing detection with distance feedback
+- Shift-constrained X/Y dragging and existing 1px/10px keyboard nudging
+- interactive crop overlay with drag-to-pan and wheel-to-zoom
+- improved full-page/website screenshot crop positioning
+- direct double-click text editing
+- touch-sized transform handles
+- manual zoom retained across normal rerenders
+
 ## Next: v0.8 UI parity program
 
 The implementation sequence and acceptance criteria are defined in `UI_PARITY_PLAN.md`.
 
-- v0.8.1 — canvas interaction parity
 - v0.8.2 — all-device artwork, picker/layout previews and styling fidelity
 - v0.8.3 — full annotation environment and animation timeline parity
 - v0.8.4 — dedicated mobile editor
