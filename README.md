@@ -4,7 +4,7 @@ Mockup Studio is a browser-first screenshot, mockup, App Store, animation, video
 
 Live: https://equilibriumpress.github.io/mockup-studio/
 
-## v0.7 — PostSpark parity release
+## v0.7.1 — parity + premium device artwork
 
 ### Screenshot and mockup editor
 - PostSpark-style Screenshot and Mockup entry points
@@ -31,6 +31,8 @@ Live: https://equilibriumpress.github.io/mockup-studio/
 - recommended-device hints based on media aspect ratio
 - single-device and group-device modes
 - 18 multi-device layouts without deleting unused media
+- original premium SVG artwork for iPhone Pro, iPhone Air, iPad Pro, Pixel 9 Pro, Galaxy S25 Ultra, Nothing Phone, MacBook Pro/Air and Studio Display/iMac
+- the same device-color and hardware detail model is used in preview and canvas export
 
 ### Background and batch workflows
 - reusable local templates
@@ -77,6 +79,10 @@ Live: https://equilibriumpress.github.io/mockup-studio/
 - local extension-to-editor handoff
 - no screenshot server
 
+## UI parity program
+
+`UI_PARITY_PLAN.md` defines the v0.8 sequence for fully aligning editor hierarchy, contextual controls, canvas behavior, device/layout pickers, backdrop/effects, annotations, timeline and mobile interaction. It also defines desktop/mobile reference sizes and visual-regression acceptance criteria.
+
 ## Architecture
 
 The published app has no runtime package dependencies:
@@ -85,7 +91,9 @@ The published app has no runtime package dependencies:
 - `docs/styles.css` — core editor UI
 - `docs/v06.css` — code/social/capture integration UI
 - `docs/v07.css` — PostSpark-parity editor UI
-- `docs/js/*.js` — editor, renderer, export, App Store, animation, video, code, social, capture and parity modules
+- `docs/v071-artwork.css` — premium vector artwork overlay styling
+- `docs/devices/premium-artwork.svg` — original device artwork sprite
+- `docs/js/*.js` — editor, renderer, export, App Store, animation, video, code, social, capture, parity and artwork modules
 - `docs/extension/*` — browser capture extension
 
 Projects persist through IndexedDB with localStorage fallback. Media stays inside the browser. Exported `.mockupstudio` documents embed media data URLs and v0.7 migrates older projects to schema 7.
