@@ -18,13 +18,26 @@ Keyframes, easing, timeline preview and animation presets.
 Video layers, device masks, trim, cuts, speed/mute, 30/60 fps choices and browser-side video/frame export paths.
 
 ### v0.6 Capture, code and social integrations
-- Chrome / Edge extension for viewport, stitched full-page and visible-element capture
-- direct local extension-to-editor handoff
-- Code Studio with themes, line numbers, highlights and diff coloring
-- public Bluesky post import
-- manual X cards without storing an API token in the public app
-- schema 6 project migration
+Chrome/Edge capture extension, Code Studio, public Bluesky import and token-free manual X cards.
 
-## Later
+### v0.7 PostSpark parity
+- PostSpark-style Screenshot/Mockup interaction model
+- Image / Frame / Annotate / Auto inspector
+- Backdrop / Overlay Effects / Pattern / Portrait controls
+- 35 device presets and device colors
+- portrait/landscape and single/group device modes
+- 18 layouts
+- auto backgrounds
+- crop presets and text alignment
+- border and shadow styles
+- bulk editing and filename defaults
+- enhanced Bluesky galleries, quotes and replies
+- extension-powered URL → Screenshot with delay and dark preference
+- schema 7 migration
 
-Server-assisted arbitrary URL capture stays outside the GitHub Pages architecture unless a backend is introduced in a future release.
+## Remaining parity gaps
+
+- direct X URL import still needs an authenticated X API strategy
+- Unsplash search is not bundled because a public static client should not expose an application credential
+- device artwork uses original Mockup Studio frame rendering rather than PostSpark proprietary artwork
+- cloud storage/share links remain outside the no-login GitHub Pages scope
