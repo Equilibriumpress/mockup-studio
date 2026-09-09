@@ -35,9 +35,28 @@ Chrome/Edge capture extension, Code Studio, public Bluesky import and token-free
 - extension-powered URL → Screenshot with delay and dark preference
 - schema 7 migration
 
-## Remaining parity gaps
+### v0.7.1 Premium device artwork
+- original SVG artwork sprite for key phone, tablet, laptop and display families
+- color-aware vector overlays in the live editor
+- matching premium hardware detailing in canvas export
+- no PostSpark or OEM artwork copied into the repository
+
+## Next: v0.8 UI parity program
+
+The implementation sequence and acceptance criteria are defined in `UI_PARITY_PLAN.md`.
+
+Planned releases:
+
+- v0.8.0 — reference captures, design tokens and editor shell
+- v0.8.1 — canvas interaction parity
+- v0.8.2 — all-device artwork, picker/layout previews and styling fidelity
+- v0.8.3 — full annotation environment and animation timeline parity
+- v0.8.4 — dedicated mobile editor
+- v0.8.5 — visual-regression, performance and final parity gate
+
+## Remaining architecture gaps
 
 - direct X URL import still needs an authenticated X API strategy
 - Unsplash search is not bundled because a public static client should not expose an application credential
-- device artwork uses original Mockup Studio frame rendering rather than PostSpark proprietary artwork
+- 35 device presets exist, while premium original artwork is currently implemented for the highest-priority device families and will expand in v0.8.2
 - cloud storage/share links remain outside the no-login GitHub Pages scope
