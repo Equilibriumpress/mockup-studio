@@ -1,0 +1,1 @@
+(async()=>{try{const {pendingCapture}=await chrome.storage.local.get('pendingCapture');if(!pendingCapture)return;window.postMessage({source:'mockup-studio-extension',type:'capture',payload:pendingCapture},location.origin);await chrome.storage.local.remove('pendingCapture')}catch(err){console.error('Mockup Studio bridge',err)}})();
