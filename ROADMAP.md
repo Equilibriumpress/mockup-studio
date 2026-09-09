@@ -17,11 +17,14 @@ Keyframes, easing, timeline preview and animation presets.
 ### v0.5 Video mockups
 Video layers, device masks, trim, cuts, speed/mute, 30/60 fps choices and browser-side video/frame export paths.
 
-## Next
-
 ### v0.6 Capture, code and social integrations
-- browser extension for viewport, full-page and element capture
-- code screenshot mode
-- Bluesky post import
-- optional X integration with a safe token strategy
-- optional server-assisted URL capture only if a backend is introduced later
+- Chrome / Edge extension for viewport, stitched full-page and visible-element capture
+- direct local extension-to-editor handoff
+- Code Studio with themes, line numbers, highlights and diff coloring
+- public Bluesky post import
+- manual X cards without storing an API token in the public app
+- schema 6 project migration
+
+## Later
+
+Server-assisted arbitrary URL capture stays outside the GitHub Pages architecture unless a backend is introduced in a future release.
