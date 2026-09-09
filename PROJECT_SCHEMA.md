@@ -1,58 +1,48 @@
-# Project schema v6
+# Project schema v7
 
 A `.mockupstudio` project is JSON. Media is embedded as data URLs so a project stays portable and does not depend on a server.
 
 ```json
 {
-  "version": 6,
+  "version": 7,
   "name": "Launch assets",
   "canvas": {
     "width": 1290,
     "height": 2796,
     "background": "#f4f1ea"
   },
-  "elements": [
-    {
-      "id": "uuid",
-      "type": "image | video | text | shape",
-      "x": 120,
-      "y": 600,
-      "width": 800,
-      "height": 1700,
-      "rotation": 0,
-      "opacity": 1,
-      "z": 1,
-      "keyframes": []
-    }
-  ],
-  "animation": {
-    "duration": 5,
-    "easing": "ease"
+  "effects": {
+    "backdropImage": "",
+    "pattern": "none",
+    "patternOpacity": 0.12,
+    "patternScale": 28,
+    "overlay": "none",
+    "overlayStrength": 0.25,
+    "portrait": "none",
+    "portraitStrength": 0.35
   },
-  "appStore": {
-    "device": "iphone",
-    "language": "en",
-    "shots": []
+  "settings": {
+    "deviceMode": "single",
+    "exportName": "{project}-{size}",
+    "defaultTemplate": ""
   },
-  "integrations": {
-    "code": {},
-    "social": {}
-  }
+  "elements": [],
+  "animation": {"duration": 5, "easing": "ease"},
+  "appStore": {"device": "iphone", "language": "en", "shots": []},
+  "integrations": {"code": {}, "social": {}}
 }
 ```
 
-Media elements add `src`, `frame`, `cropZoom`, `cropX`, `cropY`, `radius` and `shadow`. Video elements also add `duration`, `trimStart`, `trimEnd`, `speed`, `muted` and `cuts`.
+Media elements retain `src`, `frame`, crop fields, radius and shadow fields. v0.7 also adds `deviceColor`, `orientation`, `shadowStyle`, `shadowIntensity`, `borderStyle`, `borderWidth` and `borderColor`.
 
-Shape elements use `shape` values `rect`, `ellipse`, `arrow`, `step`, `blur` or `redact`, plus fill/stroke properties.
+`frame` can reference one of the v0.7 device preset IDs. Rendering maps those presets onto Mockup Studio's original phone, tablet, laptop, monitor, browser and screen-only frame primitives, so older projects remain compatible.
 
-Keyframes store `time`, `x`, `y`, `width`, `height`, `rotation`, `opacity` and `easing`.
+Text elements add optional `textAlign` with `left`, `center` or `right`.
 
-App Store shots keep a project snapshot plus localized headline/subtitle dictionaries. This keeps screenshot-set rendering deterministic after the main editor canvas changes.
+Backdrop effects are stored at project level and render in both the live stage and exported canvases. Uploaded backdrop media is embedded as a data URL in `effects.backdropImage`.
 
-Generated Code Studio cards are stored as normal image elements with an additional `codeCard` object containing language, theme, title, source code, font size, highlighted lines, line-number preference and diff preference. The rendered PNG remains embedded in `src`, so projects still open without a syntax-highlighting dependency.
+Generated Code Studio cards stay ordinary image elements with `codeCard` source metadata. Generated Post Studio cards use `socialCard`, including arrays of gallery images plus optional quote and reply text.
 
-Generated Social Studio cards are stored as normal image elements with an additional `socialCard` object containing source, source URL where applicable, author, handle, post text, date label, theme, avatar/image URLs and metrics. X cards use manually supplied source data in v0.6.
+Browser-extension captures enter the project as normal image layers. Temporary extension handoff data remains outside the `.mockupstudio` file.
 
-Browser-extension captures enter the document as ordinary image elements. Extension-local handoff state is temporary and is not part of the project file.
-
-Projects from v0.1 through v0.5 are migrated in-browser to schema 6. Existing element, animation and App Store fields remain compatible.
+Projects from v0.1 through v0.6 migrate in-browser to schema 7 while retaining existing editor, animation, App Store, code and social fields.
