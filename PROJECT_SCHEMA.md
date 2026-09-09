@@ -1,59 +1,46 @@
-# Project schema v1
+# Project schema v5
 
-A project is stored as JSON and remains intentionally portable.
+A `.mockupstudio` project is JSON. Media is embedded as data URLs so a project stays portable and does not depend on a server.
 
 ```json
 {
-  "version": 1,
-  "name": "Untitled Mockup",
+  "version": 5,
+  "name": "Launch assets",
   "canvas": {
-    "width": 1080,
-    "height": 1350,
+    "width": 1290,
+    "height": 2796,
     "background": "#f4f1ea"
   },
-  "elements": []
+  "elements": [
+    {
+      "id": "uuid",
+      "type": "image | video | text | shape",
+      "x": 120,
+      "y": 600,
+      "width": 800,
+      "height": 1700,
+      "rotation": 0,
+      "opacity": 1,
+      "z": 1,
+      "keyframes": []
+    }
+  ],
+  "animation": {
+    "duration": 5,
+    "easing": "ease"
+  },
+  "appStore": {
+    "device": "iphone",
+    "language": "en",
+    "shots": []
+  }
 }
 ```
 
-Image assets are embedded as data URLs so an exported `.mockupstudio` file is self-contained.
+Media elements add `src`, `frame`, `cropZoom`, `cropX`, `cropY`, `radius` and `shadow`. Video elements also add `duration`, `trimStart`, `trimEnd`, `speed`, `muted` and `cuts`.
 
-## Image element
+Shape elements use `shape` values `rect`, `ellipse`, `arrow`, `step`, `blur` or `redact`, plus fill/stroke properties.
 
-```json
-{
-  "id": "uuid",
-  "type": "image",
-  "name": "screen.png",
-  "src": "data:image/png;base64,...",
-  "x": 100,
-  "y": 120,
-  "width": 520,
-  "height": 1120,
-  "rotation": 0,
-  "opacity": 1,
-  "frame": "iphone",
-  "radius": 32,
-  "shadow": true,
-  "z": 1
-}
-```
+Keyframes store `time`, `x`, `y`, `width`, `height`, `rotation`, `opacity` and `easing`.
 
-## Text element
-
-```json
-{
-  "id": "uuid",
-  "type": "text",
-  "text": "Your headline",
-  "x": 120,
-  "y": 100,
-  "width": 820,
-  "height": 180,
-  "fontSize": 72,
-  "color": "#111827",
-  "bold": true,
-  "rotation": 0,
-  "opacity": 1,
-  "z": 2
-}
-```
+App Store shots keep a project snapshot plus localized headline/subtitle dictionaries. This makes screenshot-set rendering deterministic even after the main editor canvas changes.
