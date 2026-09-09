@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Mockup Studio Capture",
+  "version": "0.6.0",
+  "description": "Capture viewports, full pages and visible elements into Mockup Studio.",
+  "permissions": ["activeTab", "scripting", "storage", "tabs", "unlimitedStorage"],
+  "host_permissions": ["https://equilibriumpress.github.io/mockup-studio/*"],
+  "action": {"default_title": "Capture to Mockup Studio", "default_popup": "popup.html"},
+  "background": {"service_worker": "background.js"},
+  "content_scripts": [{"matches": ["https://equilibriumpress.github.io/mockup-studio/*"], "js": ["bridge.js"], "run_at": "document_idle"}]
+}
