@@ -1,6 +1,6 @@
 {
   "name": "mockup-studio",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "private": true,
   "description": "Browser-first PostSpark-style screenshot, mockup, App Store, animation, video, code, social and capture editor",
   "scripts": {
