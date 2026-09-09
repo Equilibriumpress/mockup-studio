@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.7 — 2026-09-09
+Added a PostSpark-parity editor layer with Screenshot/Mockup workflows, Image/Frame/Annotate/Auto inspector tabs, Backdrop/Overlay Effects/Pattern/Portrait controls, automatic image-derived gradients, uploaded backdrop images, 35 device presets with colors and orientation, 18 layouts, single/group device mode, crop presets, text alignment, border styles, Spread/Hug shadows, bulk image replacement/export, configurable export defaults, Start Over, richer Bluesky galleries/quotes/replies and extension-powered URL-to-screenshot capture with delay and dark-mode preference. Projects migrate to schema 7.
+
 ## v0.6 — 2026-09-09
 Added Code Studio with local syntax-colored cards, line highlighting, diff coloring and reusable generated code layers. Added Social Studio with public Bluesky post import and manual X cards without a client-side API token. Added the Mockup Studio Capture Manifest V3 extension for viewport, stitched full-page and visible-element capture with direct local handoff to the GitHub Pages editor. Projects migrate to schema 6.
 
