@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.8.1 — 2026-09-09
+Added direct canvas interaction parity. Selection now uses a unified single/multi bounding box with eight resize handles and a rotation handle, including proportional group resize and group rotation. Added a Position Picker with dominant-axis locking and live guidelines, canvas zoom/fit, pointer-centered Cmd/Ctrl-wheel zoom, Hand mode and Space-to-pan, edge/center/equal-spacing snapping, Shift-constrained dragging, direct double-click text editing and touch-sized transform controls. Added an interactive crop mode with rule-of-thirds overlay, drag-to-pan, wheel-to-zoom and improved tall/full-page website screenshot positioning. Manual canvas zoom now survives normal document rerenders.
+
 ## v0.8.0 — 2026-09-09
 Rebuilt the desktop editor shell around the current PostSpark interaction hierarchy while retaining Mockup Studio branding and rendering. Added shared UI design tokens, Screenshot / Mockup / Tweet / Post / Code / View All product navigation, a persistent Export action, compact Reset/Project utilities, a media thumbnail rail, contextual Image / Frame / Annotate / Auto controls above the canvas, Backdrop / Overlay Effects / Pattern / Portrait in a dedicated right-side style inspector, collapsible transform properties, a true empty-state drop zone and responsive shell breakpoints. The existing v0.7.1 device artwork, renderer, local projects and export pipeline remain unchanged beneath the new shell.
 
