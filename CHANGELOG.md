@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.8.0 — 2026-09-09
+Rebuilt the desktop editor shell around the current PostSpark interaction hierarchy while retaining Mockup Studio branding and rendering. Added shared UI design tokens, Screenshot / Mockup / Tweet / Post / Code / View All product navigation, a persistent Export action, compact Reset/Project utilities, a media thumbnail rail, contextual Image / Frame / Annotate / Auto controls above the canvas, Backdrop / Overlay Effects / Pattern / Portrait in a dedicated right-side style inspector, collapsible transform properties, a true empty-state drop zone and responsive shell breakpoints. The existing v0.7.1 device artwork, renderer, local projects and export pipeline remain unchanged beneath the new shell.
+
 ## v0.7.1 — 2026-09-09
 Added original premium SVG device artwork for the most visible mockup families: iPhone Pro, iPhone Air, iPad Pro, Pixel 9 Pro, Galaxy S25 Ultra, Nothing Phone, MacBook Pro/Air and Studio Display/iMac. Artwork stays color-aware, overlays the editor preview and has matching canvas-export hardware detailing. Added `UI_PARITY_PLAN.md` with the full optimization path toward structural, interaction and responsive UI parity.
 
