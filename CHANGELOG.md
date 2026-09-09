@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.6 — 2026-09-09
+Added Code Studio with local syntax-colored cards, line highlighting, diff coloring and reusable generated code layers. Added Social Studio with public Bluesky post import and manual X cards without a client-side API token. Added the Mockup Studio Capture Manifest V3 extension for viewport, stitched full-page and visible-element capture with direct local handoff to the GitHub Pages editor. Projects migrate to schema 6.
+
 ## v0.5 — 2026-09-09
 Added local video mockups, device-masked screen recordings, trim, jump cuts, speed/mute controls, fps/resolution settings, WebCodecs frame handling, MediaRecorder export and frame-ZIP fallback.
 
